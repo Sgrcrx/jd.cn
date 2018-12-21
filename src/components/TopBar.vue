@@ -7,7 +7,7 @@
 			</a>
 		</div>
 		<div class="slot">
-			<slot>购物车</slot>
+			<slot></slot>
 		</div>
 		<div class="menu">
 			<a href="#" @click.prevent="menuShow=true">

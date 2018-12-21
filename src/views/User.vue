@@ -28,6 +28,21 @@
 
 	export default {
 		name: 'user',
+		computed:{
+			login(){
+				return this.$store.state.user.login;
+			}
+		},
+		created(){
+			if(!this.login){
+				this.$router.push({
+					path: '/login',
+					query:{
+						from: '/user'
+					}
+				})
+			}
+		},
 		components: {
 			Footeres,
 			Tops,

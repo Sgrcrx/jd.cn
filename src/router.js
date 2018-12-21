@@ -30,6 +30,8 @@ import UserServe from './components/UserServe.vue'
 import Groom from './components/Groom.vue'
 import Topjd from './components/Topjd.vue'
 import UserBef from './components/UserBef.vue'
+import Login from './components/Login.vue'
+import LoginShoppingCart from './components/LoginShoppingCart.vue'
 
 Vue.use(Router)
 
@@ -80,17 +82,25 @@ const router = new Router({
 			name: 'ss',
 			component: Ss
 		}, {
-			path: '/Cart',
+			path: '/cart',
 			name: 'cart',
 			component: Cart
 		}, {
-			path: '/User',
+			path: '/user',
 			name: 'user',
 			component: User
 		},{
 			path: '/userbef',
 			name: 'userbef',
 			component: UserBef
+		},{
+			path: '/login',
+			name: 'login',
+			component: Login
+		}, {
+			path: '/loginahoppingcart',
+			name: 'loginahoppingcart',
+			component: LoginShoppingCart
 		}, {
 			path: '/topjd',
 			name: 'topjd',
