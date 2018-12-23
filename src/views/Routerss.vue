@@ -28,7 +28,7 @@
 	}
 </script>
 
-<style>
+<style scoped="scoped">
 	button{
 		margin: 20px;
 	}

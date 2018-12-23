@@ -15,7 +15,7 @@
 	}
 </script>
 
-<style>
+<style scoped="scoped">
 	h1{
 		background-color: salmon;
 		color: #fff;

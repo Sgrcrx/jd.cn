@@ -50,7 +50,7 @@
 	}
 </script>
 
-<style>
+<style scoped="scoped">
 	/*轮播图*/
 	
 	.swiper-container {

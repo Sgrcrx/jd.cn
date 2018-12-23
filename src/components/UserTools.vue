@@ -53,7 +53,7 @@
 	}
 </script>
 
-<style>
+<style scoped="scoped">
 	.usertools{
 		box-sizing: border-box;
 		width: 100%;

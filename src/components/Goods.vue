@@ -61,7 +61,7 @@
 	}
 </script>
 
-<style>
+<style scoped="scoped">
 	img {
 		border: 0 none;
 		vertical-align: top;

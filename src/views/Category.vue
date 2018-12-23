@@ -1,26 +1,15 @@
 <template>
 	<div class="categorys">
 		<!--search1-->
-	<header>
-			<span class="lefts">
-				<a href="#" @click.prevent="hide"><i class="fa fa-angle-left"></i></a>
-			</span>
-			<div class='category'>
-				<i class=' fa fa-category'></i>
-			</div>
-			<div class='search-input'>
-				<div class='tu'>
-					<i class='fa fa-search'></i>
+	<top-bar>
+				<div class='search-input'>
+					<div class='tu'>
+						<i class='fa fa-search'></i>
+					</div>
+					<input type='text' name='' id='' value='' placeholder='请输入搜索内容'  @focus="show=true"/>
 				</div>
-				<input type='text' name='' id='' value='' placeholder='请输入搜索内容'  @focus="show=true" />
-			</div>
-			<div class='user'>
-				<button>搜索</button>
-			</div>
-	</header>
-	
-		
-		
+			</header>
+	</top-bar>
 	<!--search2-->
 		<search-click v-model="show"></search-click>
 		<category-layout></category-layout>
@@ -29,6 +18,7 @@
 </template>
 
 <script>
+	import TopBar from '@/components/TopBar'
 	import Footeres from '@/components/Footeres'
 	import SearchClick from '../components/SearchClick'
 	import CategoryLayout from '../views/CategoryLayout'
@@ -41,6 +31,7 @@
 		},
 		name: 'category',
 		components: {
+			TopBar,
 			Footeres,
 			SearchClick,
 			CategoryLayout
@@ -56,6 +47,9 @@
 </script>
 
 <style scoped="scoped">
+	.categorys{
+		color: #333;
+	}
 	.searchclick {
 		width: 100%;
 		height: 100%;

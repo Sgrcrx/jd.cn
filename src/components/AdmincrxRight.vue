@@ -10,5 +10,5 @@
 <script>
 </script>
 
-<style>
+<style scoped="scoped">
 </style>

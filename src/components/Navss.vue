@@ -54,7 +54,7 @@
 	}
 </script>
 
-<style>
+<style scoped="scoped">
 	.floor-01 {
 		height: 9rem;
 		margin-top: 0.2rem;

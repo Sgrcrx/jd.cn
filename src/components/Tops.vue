@@ -63,7 +63,7 @@
 	}
 </script>
 
-<style>
+<style scoped="scoped">
 	.top-bar {
 		width: 100%;
 		background-color: #fff;

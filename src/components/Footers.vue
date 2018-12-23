@@ -33,7 +33,7 @@
 //});
 </script>
 
-<style>
+<style scoped="scoped">
 
 /* 底部菜单 */
 
