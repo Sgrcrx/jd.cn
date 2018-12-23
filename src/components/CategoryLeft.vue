@@ -2,7 +2,7 @@
 	<div class="category-left">
 		<div class="left-crx" v-for="(item,index) in clicks">
 			<span class="titles">
-				<router-link :to="item.to" v-text='item.texts'></router-link>
+				<router-link :to="item.to" v-text='item.texts' @click='checked'></router-link>
 			</span>
 		</div>
 	</div>
@@ -127,6 +127,12 @@
 					texts: '房产',
 					to: ''
 				}, ]
+			}
+		},
+		methods:{
+			checked(val){
+				this.className = checked;
+				console.log(val);
 			}
 		}
 	}
