@@ -88,6 +88,7 @@
 		content: '';
 		clear: both;
 		padding: 0px 10px;
+		box-sizing: border-box;
 	}
 	
 	.hot-item {

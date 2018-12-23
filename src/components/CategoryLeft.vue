@@ -130,9 +130,42 @@
 			}
 		},
 		methods: {
-			checked() {
-				this.className = checked;
-			}
+			
+			var offsetTop = 0;
+			var startY = 0;
+			var item = document.querySelector(".left-crx");
+			var items = document.querySelector(".left-crx .titles");
+			var ot = item.height() - items.height()-150;
+			item.on({
+				touchstart:function(e){
+					startY = e.originalEvent.changedTouches[0].clientY;
+				},
+				touchmove:function(e){
+					var y = e.originalEvent.changedTouches[0].clientY;
+					var tmp = offsetTop+(y-startY);
+					
+					// 下拉的越界处理
+					tmp = tmp>150?150:tmp;
+					// 上拉的越界处理
+					tmp = tmp<ot?ot:tmp;
+					
+					items.css("top",tmp+"px");
+				},
+				touchend:function(e){
+					var y = e.originalEvent.changedTouches[0].clientY;
+					
+					offsetTop = offsetTop+(y-startY);
+					
+					// 松手后回到最顶部
+					offsetTop = offsetTop>0?0:offsetTop;
+					// 松手后回到最底部
+					offsetTop = offsetTop<(ot+150)?(ot+150):offsetTop;
+					
+					items.animate({"top":offsetTop+"px"},200);
+					
+				},
+				touchcancel:function(e){},
+			});
 		}
 	}
 </script>
@@ -150,10 +183,7 @@
 	
 	.left-crx {
 		width: 100%;
-		height: 100%;
-		top: 0px;
-		left: 0px;
-		position: absolute;
+		height: 100%;	
 	}
 	
 	.titles {
