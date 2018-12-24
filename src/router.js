@@ -6,6 +6,7 @@ import Cart from './views/Cart.vue'
 import User from './views/User.vue'
 import Search from './views/Search.vue'
 import Category from './views/Category.vue'
+import Categ from './views/Categ.vue'
 import Productss from './views/Productss.vue'
 
 import Goodes from './components/Goodes.vue'
@@ -114,6 +115,10 @@ const router = new Router({
 			name: 'category',
 			component: Category
 		}, {
+			path: '/categ',
+			name: 'categ',
+			component: Categ
+		}, {
 			path: '/productss/:id',
 			name: 'productss',
 			component: Productss,
@@ -144,14 +149,7 @@ router.beforeEach((to, from, next) => {
    		
    		next();
    	}
- 	
-// 	//
-// 	if(to.path=='/user'){
-//  	next({ path: '/' });
-//  }else{
-//  	next();
-//  }
-    //
+
  	
 })
 

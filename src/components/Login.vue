@@ -1,6 +1,7 @@
 <template>
 	<div class="userbef">
 		<topjd></topjd>
+		
 		<!--1.用户名、邮箱、已验证手机-->
 		<div class="user-load">
 			<input class="user-login" type="text" v-model="name" name="user-login" id="user-login" value="" placeholder='用户名/邮箱/已验证手机' />

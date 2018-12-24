@@ -34,7 +34,7 @@
 					default:''
 				},
 				images:{
-					type:'',
+					type:String,
 					default:''
 				},
 				money:{

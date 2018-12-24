@@ -12,11 +12,11 @@
 		<!--<category-right></category-right>-->
 		<div class="category-right" ref='content' @touchstart="contentTouchStart" @touchmove="contentTouchMove" @touchend="contentTouchEnd">
 
-			<div class="rights" :style="{top:contentTop+'px'}" ref='content-right'>
+			<div class="rights" :style="{top:contentTop+'px'}" ref='content-right' v-for="(row,i) in products">
 				<!--top-->
 				<div class="top">
 					<router-link to=''>
-						<img src="../../public/img/newUser.png" />
+						<img :src="row.images" />
 					</router-link>
 				</div>
 				<!--hot-->
@@ -33,9 +33,9 @@
 				<!--分类图-->
 				<div class="category-item">
 					<ul>
-						<li v-for="(item,index) in titles">
-							<img :src="item.images" />
-							<span v-text="item.name"></span>
+						<li>
+							<img :src="row.images" />
+							<span v-text="row.name"></span>
 						</li>
 					</ul>
 					<!---->
@@ -178,7 +178,9 @@
 				contentTop: 0,
 				contentTopTmp: 0,
 				contentMinTop: 0,
-				
+				products:[],
+				category:[{
+					images: require('../../public/img/newUser.png'),
 					titles: [{
 					images: require('../../public/img/phone1.png'),
 					name: '手机1'
@@ -231,6 +233,8 @@
 					images: require('../../public/img/phone1.png'),
 					name: '手机5'
 				}, ],
+				}]
+				
 				
 				
 
@@ -238,6 +242,7 @@
 		},
 		methods: {
 			getContentList(id) {
+				this.products = {...this.categogy[(Math.random() > 0.5 ? 1 : 0)]};
 				console.log(id);
 			},
 			asideTouchStart(event) {

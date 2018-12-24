@@ -8,11 +8,12 @@
 					</div>
 					<input type='text' name='' id='' value='' placeholder='请输入搜索内容'  @focus="show=true"/>
 				</div>
-			</header>
+			
 	</top-bar>
 	<!--search2-->
-		<search-click v-model="show"></search-click>
+		<!--<search-click v-model="show"></search-click>-->
 		<category-layout></category-layout>
+		<!--<category-layout1></category-layout1>-->
 		<footeres></footeres>
 	</div>
 </template>
@@ -22,6 +23,7 @@
 	import Footeres from '@/components/Footeres'
 	import SearchClick from '../components/SearchClick'
 	import CategoryLayout from '../views/CategoryLayout'
+//	import CategoryLayout1 from '../views/CategoryLayout1'
 
 	export default {
 		data() {
@@ -34,7 +36,8 @@
 			TopBar,
 			Footeres,
 			SearchClick,
-			CategoryLayout
+			CategoryLayout,
+//			CategoryLayout1,
 		},
 		methods:{
 			hide(){
@@ -49,6 +52,7 @@
 <style scoped="scoped">
 	.categorys{
 		color: #333;
+		height: 100%;
 	}
 	.searchclick {
 		width: 100%;
@@ -80,9 +84,7 @@
 		border-bottom: 1px solid #eee;
 	}
 	
-	header.fixed {
-		background-color: #e43130;
-	}
+	
 	
 	a {
 		text-decoration: none;
@@ -109,11 +111,7 @@
 		line-height: 44px;
 	}
 	
-	.category {
-		height: 44px;
-		box-sizing: border-box;
-		/*background-color: blue;*/
-	}
+	
 	
 	.search-input {
 		width: 100%;
@@ -187,5 +185,9 @@
 		margin-top: 8px;
 		font-size: 14px;
 		background-color: #e93b3d;
+	}
+	
+	.category-layout{
+		height: 100%;
 	}
 </style>
