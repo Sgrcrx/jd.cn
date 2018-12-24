@@ -16,6 +16,8 @@ import Recommend from './components/Recommend.vue'
 import Routerss from './views/Routerss.vue'
 import Ss from './views/Ss.vue'
 import Ceshi from './views/Ceshi.vue'
+import CategoryLayout1 from './views/CategoryLayout1.vue'
+import CategoryLayout from './views/CategoryLayout.vue'
 //admincrx
 import Admincrx from './views/Admincrx.vue'
 import AdmincrxTop from './components/AdmincrxTop.vue'
@@ -106,6 +108,14 @@ const router = new Router({
 			path: '/topjd',
 			name: 'topjd',
 			component: Topjd
+		},{
+			path: '/categoryLayout1',
+			name: 'categoryLayout1',
+			component: CategoryLayout1
+		},{
+			path: '/categoryLayout',
+			name: 'categoryLayout',
+			component: CategoryLayout
 		},{
 			path: '/search',
 			name: 'search',
