@@ -118,6 +118,7 @@
 	
 	.top-bar .menu-list li {
 		height: 40px;
+		width: 100%;
 		line-height: 40px;
 		margin-left: 40px;
 		position: relative;

@@ -21,14 +21,27 @@
 			</span>
 		</div>
 		<div class="border"></div>
-		
+		<!---->
+		<comment-item></comment-item>
 		
 		
 	</div>
 </template>
 
 <script>
-	export default{}
+	
+	import CommentItem from "@/components/CommentItem";
+	
+	export default{
+		data(){
+			return{
+				
+			};
+		},
+		components:{
+			CommentItem
+		}
+	}
 </script>
 
 <style scoped="scoped">
@@ -57,6 +70,7 @@
 		background-color: #e8e8ed;
 	}
 	.floor{
+		/*margin-top: 22px;*/
 		box-sizing: border-box;
 		padding: 0px 10px;
 		color: #666;

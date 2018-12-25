@@ -8,6 +8,7 @@ import Search from './views/Search.vue'
 import Category from './views/Category.vue'
 import Categ from './views/Categ.vue'
 import Productss from './views/Productss.vue'
+import Productss1 from './views/Productss1.vue'
 
 import Goodes from './components/Goodes.vue'
 import Comment from './components/Comment.vue'
@@ -34,6 +35,8 @@ import Groom from './components/Groom.vue'
 import Topjd from './components/Topjd.vue'
 import UserBef from './components/UserBef.vue'
 import Login from './components/Login.vue'
+import Buys from './components/Buys.vue'
+import CommentItem from './components/CommentItem.vue'
 import LoginShoppingCart from './components/LoginShoppingCart.vue'
 
 Vue.use(Router)
@@ -128,6 +131,18 @@ const router = new Router({
 			path: '/categ',
 			name: 'categ',
 			component: Categ
+		},{
+			path: '/productss1',
+			name: 'productss1',
+			component: Productss1
+		},{
+			path: '/commentitem',
+			name: 'commentitem',
+			component: CommentItem
+		}, {
+			path: '/buys',
+			name: 'buys',
+			component: Buys
 		}, {
 			path: '/productss/:id',
 			name: 'productss',

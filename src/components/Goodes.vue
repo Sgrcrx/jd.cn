@@ -140,7 +140,7 @@
 			<div class="left yun">
 				<span class="yf">运费</span>
 				<div class="cc">
-					<p class="xin">免运费</p>
+					<p class="xing">免运费</p>
 				</div>
 			</div>
 		
@@ -188,7 +188,7 @@
 	</div>
 	<div class="boder"></div>
 	<!--下拉-->
-	<div class="crx"></div>
+	<!--<div class="crx"></div>-->
 	</div>
 </template>
 
@@ -541,19 +541,24 @@
 	.se{
 		position: relative;
 	}
-	.yun{
-		margin-top: -10px;
+	span.yun{
+		/*margin-top: -10px;*/
 	}
 	.yf {
 		display: inline-block;
 		width: 50px;
 		height: 40px;
 		position: relative;
-		bottom: 16px;
+		bottom: 14px;
 		left: 0px;
 		font-size: 16px;
 		line-height: 50px;
 	}
+	
+	/*.yf .cc .xing{
+		margin-top: -10px;
+	}*/
+	
 	.wh .menu{
 		position: absolute;
 		/*bottom: -30px;*/
@@ -597,6 +602,17 @@
 		text-overflow: ellipsis;
 	}
 	
+	button{
+		border: 1px solid #eee;
+		outline: none;
+		width: 64px;
+		box-sizing: border-box;
+		padding: 1px;
+		background-color: #fff;
+		border-radius: 10px;
+		font-size: 10px;
+		color: #333;
+	}
 	/*下拉*/
 	
 	.crx {

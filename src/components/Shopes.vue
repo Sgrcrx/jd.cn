@@ -6,13 +6,13 @@
 			</div>
 			<div class="flex-item right">
 				<div class="flex content">
-					<router-link :to="'/productss/'+item.id">
+					<router-link :to="{path:'/productss1',query:{id:item.id}}">
 						<div class="image">
 							<img v-bind:src="item.image" />
 						</div>
 					</router-link>
 					<div class="flex-item inner">
-						<router-link :to="'/productss/'+item.id">
+						<router-link :to="{path:'/productss1',query:{id:item.id}}">
 							<div class="text">
 								<h4 v-text="item.title"></h4>
 								<h5>0.85kg</h5>
