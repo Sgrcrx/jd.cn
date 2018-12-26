@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="js/react.development.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/react-dom.development.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/browser.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+		</style>
+	</head>
+
+	<body>
+		<div id="root"></div>
+		<script type="text/babel">
+			//定义组件
+			class Book extends React.Component{
+				render(){
+					return (<div className="book">书名:{this.props.name},作者:{this.props.author},价格:{this.props.price}</div>);
+				}
+			}
+			//显示组件
+			let price = 22.22;
+			let book1 = (<div>
+							<Book name="红楼梦" author="曹雪芹" price={price} />
+							<Book name="三国演义" author="罗贯中" price="22.10" />
+						</div>)
+			//类似于component 加载组件
+			ReactDOM.render(
+				book1,
+			document.getElementById('root') );
+		</script>
+	</body>
+
+</html>
